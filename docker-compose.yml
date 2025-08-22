@@ -1,8 +1,7 @@
-version: '3.9'
 services:
   ssh.cyrhades.fr:
-    build: ssh
+    build: ./.docker/ssh
   webssh.cyrhades.fr:
-    build: webssh
+    build: ./.docker/webssh
     ports:
-    - "80:8888"
+      - ${PORT}:8888

@@ -52,7 +52,7 @@ RUN gcc -m32 challenge.c -z noexecstack  -no-pie -fno-stack-protector -o challen
 RUN chown root:cyrhades challenge && chmod 4750 challenge
 
 # Activer le service SSH et préparer l'environnement SSH
-RUN mkdir /var/run/sshd
+RUN mkdir -p /var/run/sshd
 
 # Configurer le serveur SSH pour permettre la connexion avec le mot de passe
 RUN echo "PermitRootLogin no" >> /etc/ssh/sshd_config && \
