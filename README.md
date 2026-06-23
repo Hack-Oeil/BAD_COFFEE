@@ -20,3 +20,5 @@ Mais voici comment installer ce CTF manuellement :
 > git clone https://github.com/Hack-Oeil/BAD_COFFEE.git
 
 > cd BAD_COFFEE
+
+> docker compose up -d docker-compose-default.yml

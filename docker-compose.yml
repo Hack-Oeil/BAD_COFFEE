@@ -1,7 +1,11 @@
 services:
   ssh.cyrhades.fr:
     build: ./.docker/ssh
-  webssh.cyrhades.fr:
-    build: ./.docker/webssh
-    ports:
-      - ${PORT}:8888
+    labels:
+      ho.ctf.cyrhades: "challenge"
+      ho.ctf.cyrhades.wbssh: "1"
+    environment:
+      SSH_HOSTNAME: "ssh.cyrhades.fr"
+      SSH_PORT: 22
+      SSH_USERNAME: "cyrhades"
+      SSH_PASSWORD: "secret"
