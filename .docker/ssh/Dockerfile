@@ -29,8 +29,11 @@ ENV LC_ALL en_US.UTF-8
 # Définir le répertoire de travail
 WORKDIR /home/cyrhades
 
+# Argument pour la langue du challenge
+ARG LANGUAGE=fr
+
 # Copier les fichiers dans le conteneur
-COPY challenge.c .
+COPY challenge_${LANGUAGE}.c challenge.c
 COPY .passwd .
 
 # Copie le fichier message_ssh.txt depuis le système hôte vers le conteneur

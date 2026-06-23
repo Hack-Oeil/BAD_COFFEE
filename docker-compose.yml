@@ -1,9 +1,12 @@
 services:
   ssh.cyrhades.fr:
-    build: ./.docker/ssh
+    build:
+      context: ./.docker/ssh
+      args:
+        LANGUAGE: ${LANGUAGE:-fr}
     labels:
       ho.ctf.cyrhades: "challenge"
-      ho.ctf.cyrhades.wbssh: "1"
+      ho.ctf.cyrhades.webssh: "1"
     environment:
       SSH_HOSTNAME: "ssh.cyrhades.fr"
       SSH_PORT: 22

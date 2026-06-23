@@ -1,6 +1,9 @@
 services:
   ssh.cyrhades.fr:
-    build: ./.docker/ssh
+    build:
+      context: ./.docker/ssh
+      args:
+        LANGUAGE: ${LANGUAGE:-fr}
   webssh.cyrhades.fr:
     build: ./.docker/webssh
     ports:
