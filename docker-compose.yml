@@ -7,6 +7,7 @@ services:
     labels:
       ho.ctf.cyrhades: "challenge"
       ho.ctf.cyrhades.webssh: "1"
+      ho.ctf.cyrhades.flag: "f5b8f318d2984d42cfef945e6112160eac8909e3"
     environment:
       SSH_HOSTNAME: "ssh.cyrhades.fr"
       SSH_PORT: 22
